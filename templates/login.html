@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>登录页面</title>
+	{% include "static.html" %}
+  </head>
+  <body id="login">
+    <div class="container">
+
+      <form class="form-signin" action="/account/verify" method="POST">
+        <h2 class="form-signin-heading">登录</h2>
+
+        <input name="account" type="text" class="input-block-level" placeholder="账号">
+        <input name="passwd" type="password" class="input-block-level" placeholder="密码">
+        <label class="checkbox">
+          <input type="checkbox" value="remember-me"> 记住密码
+        </label>
+        <button class="btn btn-large btn-primary" type="submit">登录</button>
+        {% if  msg %}
+           <div class="alert alert-block">
+							<button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <h4>提示</h4>
+                        	登录出错！</div>
+				{% endif  %}
+            	  
+      </form>
+
+    </div> <!-- /container -->
+    {% include "end.html" %}
+  </body>
+</html>

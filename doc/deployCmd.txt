@@ -1,0 +1,2 @@
+windows
+cmd /k D:\Programs\apache-tomcat-7.0.72\bin\startup.bat

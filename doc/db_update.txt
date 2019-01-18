@@ -1,0 +1,29 @@
+cd D:\dev\eclipse-workplace\JavaDispatch
+d:
+
+python manage.py migrate 
+python manage.py makemigrations account
+python manage.py migrate account
+
+python manage.py startapp application
+python manage.py makemigrations application
+python manage.py migrate application
+
+python manage.py startapp server
+python manage.py makemigrations server
+python manage.py migrate server
+
+
+
+python manage.py startapp DeployConfig
+python manage.py makemigrations DeployConfig
+python manage.py migrate DeployConfig
+
+
+python manage.py startapp jdfile
+python manage.py makemigrations jdfile
+python manage.py migrate jdfile
+
+python manage.py startapp task
+python manage.py makemigrations task
+python manage.py migrate task
